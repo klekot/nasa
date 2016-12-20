@@ -9,7 +9,7 @@ $this->title = 'My Yii Application';
     <div class="jumbotron">
         <h1>NASA RSS FEED</h1>
         <p></p>
-        <p><a class="btn btn-lg btn-success" href="/web/site/nasa_rss">Get list</a></p>
+        <p><a class="btn btn-lg btn-success" href="/web/items/index">Get list</a></p>
     </div>
 
 </div>

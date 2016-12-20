@@ -15,8 +15,8 @@ class m161219_115420_create_items_table extends Migration
         $this->createTable('items', [
             'id' => $this->primaryKey(),
             'title' => $this->string()->notNull(),
-            'publication_date' => $this->date(),
-            'upload_date' => $this->date(),
+            'publication_date' => $this->datetime(),
+            'upload_date' => $this->datetime(),
         ]);
     }
 

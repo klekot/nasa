@@ -37,7 +37,7 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'NASA RSS', 'url' => ['/site/nasa_rss']],
+            ['label' => 'NASA RSS', 'url' => ['/items/index']],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (

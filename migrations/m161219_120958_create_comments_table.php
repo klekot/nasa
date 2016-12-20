@@ -18,7 +18,6 @@ class m161219_120958_create_comments_table extends Migration
         $this->createTable('comments', [
             'id' => $this->primaryKey(),
             'body' => $this->text(),
-            'item_id' => $this->integer()->notNull(),
         ]);
     }
 

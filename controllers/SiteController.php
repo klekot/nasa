@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Items;
 
 class SiteController extends Controller
 {
@@ -95,26 +96,10 @@ class SiteController extends Controller
         return $this->goHome();
     }
 
-    /**
-     * Displays comments page.
-     *
-     * @return string
-     */
-    public function actionComments()
-    {
-        return $this->render('comments');
-    }
-
-    /**
-     * Displays nasa_rss page.
-     *
-     * @return string
-     */
-    public function actionNasa_rss()
+    public function actionUpdate_feed()
     {
         $rss = "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss";
-        $xml = @simplexml_load_file($rss);
-        if($xml===false) die('Error parse RSS: '.$rss);
-        return $this->render('nasa_rss', array('xml' => $xml));
+        Items::parseRssFrom($rss);
+        return $this->redirect(['/items/index']);
     }
 }
